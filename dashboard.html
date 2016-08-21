@@ -25,12 +25,12 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="#" class="navbar-brand"><b>BRIDGE</b></a>
+				<a href="#" class="navbar-brand">BRIDGE</a>
 			</div>
 			<!-- Menu Items-->
 			<div class="collapse navbar-collapse" id="mainNavBar">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#" ><b>Hi</b>,<%session.getAttribute("username");%></a></li>
+					<li ><a href="#" ><b>Hi</b>,<%session.getAttribute("username");%></a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li class="active"><a href="#" >Dashboard</a></li>
@@ -48,19 +48,21 @@
 		<div class="row">
 			<!-- COLUMN ONE-->
             <div class="col-md-3">
-				<img src="images\indexpagepic.gif" class="img-responsive">
+             <button type="button" class="btn btn-info btnArrange createWebsite" data-toggle="collapse" data-target="#stepOne" id="create-website">Create Website</button>
+				
 			</div>
 			<!-- COLUMN TWO-->
             <div class="col-md-3">
-				<img src="images\indexpagepic.gif" class="img-responsive">
+				
 			</div>
 			<!-- COLUMN THREE-->
             <div class="col-md-3">
-				<img src="images\indexpagepic.gif" class="img-responsive">
+				
+
 			</div>
 			<!-- COLUMN FOUR-->
             <div class="col-md-3 borderline">
-                <button type="button" class="btn btn-info btnArrange createWebsite" data-toggle="collapse" data-target="#stepOne" id="create-website">Create Website</button>
+               
             </div>
 		</div>
 	</div>
@@ -69,21 +71,21 @@
     <!-- This content loads up when 'Create website button is clicked' -->
     <div class="container collapse" id="stepOne">
         <div class="row bs-wizard">
-                <div class="col-xs-3 bs-wizard-step complete" id="progressStep1">
+                <div class="col-md-4 bs-wizard-step complete" id="progressStep1">
                   <div class="text-center bs-wizard-stepnum">Step 1</div>
                   <div class="progress"><div class="progress-bar"></div></div>
                   <a href="#" class="bs-wizard-dot" id='dot1'></a>
                   <div class="bs-wizard-info text-center">Select category and template.</div>
                 </div>
 
-                <div class="col-xs-3 bs-wizard-step disabled" id="progressStep2">
+                <div class="col-md-4 bs-wizard-step disabled" id="progressStep2">
                   <div class="text-center bs-wizard-stepnum">Step 2</div>
                   <div class="progress"><div class="progress-bar"></div></div>
                   <a href="#" class="bs-wizard-dot"></a>
                   <div class="bs-wizard-info text-center">Fill content.</div>
                 </div>
 
-                <div class="col-xs-3 bs-wizard-step disabled" id="progressStep3">
+                <div class="col-md-4 bs-wizard-step disabled" id="progressStep3">
                   <div class="text-center bs-wizard-stepnum">Step 3</div>
                   <div class="progress"><div class="progress-bar"></div></div>
                   <a href="#" class="bs-wizard-dot"></a>
@@ -110,6 +112,7 @@
 			<!-- COLUMN ONE-->
             <div class="col-md-3">
 				<img src="images\indexpagepic.gif" class="img-responsive">
+				
 			</div>
 			<!-- COLUMN TWO-->
             <div class="col-md-3">
