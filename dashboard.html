@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- Import Jquery Lib-->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!-- user defined scripts and css-->
+	<link rel="stylesheet" type="text/css" href="css\style.css">
+	<script src="js\dashboard.js"></script>
+</head>
+<body>
+	<!-- NAVBAR STARTS HERE-->
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<!--LOGO -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-brand"><b>BRIDGE</b></a>
+			</div>
+			<!-- Menu Items-->
+			<div class="collapse navbar-collapse" id="mainNavBar">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#" ><b>Hi</b>,<%session.getAttribute("username");%></a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="#" >Dashboard</a></li>
+					<li ><a href="#" >Analytics</a></li>
+					<li><form action="" method="post"><button type="button" id="logoutButton" class="btn btn-danger">Logout</button></form></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- NAVBAR ENDS HERE-->
+
+	<!-- DASHBOARD BODY CODE STARTS HERE -->
+	<div class="container mainDashboard">
+		<!-- ROW ONE-->
+		<div class="row">
+			<!-- COLUMN ONE-->
+            <div class="col-md-3">
+				<img src="images\indexpagepic.gif" class="img-responsive">
+			</div>
+			<!-- COLUMN TWO-->
+            <div class="col-md-3">
+				<img src="images\indexpagepic.gif" class="img-responsive">
+			</div>
+			<!-- COLUMN THREE-->
+            <div class="col-md-3">
+				<img src="images\indexpagepic.gif" class="img-responsive">
+			</div>
+			<!-- COLUMN FOUR-->
+            <div class="col-md-3 borderline">
+                <button type="button" class="btn btn-info btnArrange createWebsite" data-toggle="collapse" data-target="#stepOne" id="create-website">Create Website</button>
+            </div>
+		</div>
+	</div>
+	<!-- DASHBOARD BODY CODE ENDS HERE -->
+
+    <!-- This content loads up when 'Create website button is clicked' -->
+    <div class="container collapse" id="stepOne">
+        <div class="row bs-wizard">
+                <div class="col-xs-3 bs-wizard-step complete" id="progressStep1">
+                  <div class="text-center bs-wizard-stepnum">Step 1</div>
+                  <div class="progress"><div class="progress-bar"></div></div>
+                  <a href="#" class="bs-wizard-dot" id='dot1'></a>
+                  <div class="bs-wizard-info text-center">Select category and template.</div>
+                </div>
+
+                <div class="col-xs-3 bs-wizard-step disabled" id="progressStep2">
+                  <div class="text-center bs-wizard-stepnum">Step 2</div>
+                  <div class="progress"><div class="progress-bar"></div></div>
+                  <a href="#" class="bs-wizard-dot"></a>
+                  <div class="bs-wizard-info text-center">Fill content.</div>
+                </div>
+
+                <div class="col-xs-3 bs-wizard-step disabled" id="progressStep3">
+                  <div class="text-center bs-wizard-stepnum">Step 3</div>
+                  <div class="progress"><div class="progress-bar"></div></div>
+                  <a href="#" class="bs-wizard-dot"></a>
+                  <div class="bs-wizard-info text-center">Preview and Deploy</div>
+                </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="dropbtn">Select Category</button>
+          <div class="dropdown-content">
+              <div id="appLaunchClick">
+                  <a href="#appLaunch">App Launch</a>
+              </div>
+              <div id="eventLaunchClick">
+                  <a href="#eventLaunch">Event Launch</a>
+              </div>
+          </div>
+        </div>
+	</div>
+
+    <div class="container" id="appLaunch">
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="row">
+			<!-- COLUMN ONE-->
+            <div class="col-md-3">
+				<img src="images\indexpagepic.gif" class="img-responsive">
+			</div>
+			<!-- COLUMN TWO-->
+            <div class="col-md-3">
+				<img src="images\indexpagepic.gif" class="img-responsive">
+			</div>
+			<!-- COLUMN THREE-->
+            <div class="col-md-3">
+				<img src="images\indexpagepic.gif" class="img-responsive">
+			</div>
+        </div>
+        <button type="button" class="btn btn-primary" name="selectTemplate" id="selectTemplate1">Select Template</button>
+    </div>
+
+    <div class="container" id="eventLaunch">
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="row">
+            <!-- COLUMN ONE-->
+            <div class="col-md-3">
+                <img src="images\indexpagepic.gif" class="img-responsive">
+            </div>
+            <!-- COLUMN TWO-->
+            <div class="col-md-3">
+                <img src="images\indexpagepic.gif" class="img-responsive">
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary" name="selectTemplate" id="selectTemplate2">Select Template</button>
+    </div>
+
+    <div class="container fillContent">
+        <div class="row">
+            <div class="col-md-6">
+                Template stuff comes here
+            </div>
+            <div class="col-md-6">
+                Form stuff comes here
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary" name="confirmContent" id="confirmContent">Preview and Deploy</button>
+    </div>
+
+    <div class="container preview">
+        Website is previewed here.
+        <button type="button" class="btn btn-primary"name="deploy">Deploy Website</button>
+    </div>
+
+
+</body>
+</html>
